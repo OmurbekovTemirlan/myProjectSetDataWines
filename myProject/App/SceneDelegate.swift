@@ -11,20 +11,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
-
+        
         let window = UIWindow(windowScene: windowScene)
-        let tabBarView = TabBarView()
-        let navOne = UINavigationController(rootViewController: tabBarView)
-        tabBarView.viewControllers?.forEach {
-            if let settingsView = $0 as? SettingsView {
-                settingsView.navigationControllerRef = navOne
-            }
-        }
+        let navOne = UINavigationController(rootViewController: HomeView())
         window.rootViewController = navOne
+        
         window.makeKeyAndVisible()
         self.window = window
     }

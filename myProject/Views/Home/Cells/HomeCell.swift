@@ -7,13 +7,6 @@
 
 import UIKit
 
-struct CellElments {
-    var titleFood: String
-    var infoLab: String
-    var priceLbl: String
-    var image: String
-}
-
 class HomeCell: UICollectionViewCell {
     
     private lazy var titleFoodLbl: UILabel = {
@@ -83,10 +76,9 @@ class HomeCell: UICollectionViewCell {
             images.widthAnchor.constraint(equalToConstant: 100),
         ])
     }
-    func set(dates: CellElments){
-        titleFoodLbl.text = dates.titleFood
-        infoLbl.text = dates.infoLab
-        priceLbl.text = dates.priceLbl
-        images.image = UIImage(named: dates.image)
+    func set(dates: Wine){
+        titleFoodLbl.text = dates.wine
+//        infoLbl.text = dates.winery
+//        priceLbl.text = dates.location
     }
 }

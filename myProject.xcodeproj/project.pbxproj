@@ -7,23 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		188CF7022BC1A0C3005596B9 /* HomeNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188CF7012BC1A0C3005596B9 /* HomeNavBar.swift */; };
+		188CF7042BC1B614005596B9 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188CF7032BC1B614005596B9 /* HomeCell.swift */; };
+		188CF7072BC2E675005596B9 /* HomeWineService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188CF7062BC2E675005596B9 /* HomeWineService.swift */; };
+		188CF7092BC2E6C6005596B9 /* Wine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188CF7082BC2E6C6005596B9 /* Wine.swift */; };
 		18A7F0322BBCA5C7000E947E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A7F0312BBCA5C7000E947E /* AppDelegate.swift */; };
 		18A7F0342BBCA5C7000E947E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A7F0332BBCA5C7000E947E /* SceneDelegate.swift */; };
-		18A7F0362BBCA5C7000E947E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A7F0352BBCA5C7000E947E /* ViewController.swift */; };
-		18A7F0392BBCA5C7000E947E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A7F0372BBCA5C7000E947E /* Main.storyboard */; };
 		18A7F03B2BBCA5CA000E947E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18A7F03A2BBCA5CA000E947E /* Assets.xcassets */; };
 		18A7F03E2BBCA5CA000E947E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A7F03C2BBCA5CA000E947E /* LaunchScreen.storyboard */; };
+		18A7F0472BBCA5F1000E947E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A7F0462BBCA5F1000E947E /* HomeView.swift */; };
+		18A7F0722BC06E7F000E947E /* ChatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A7F0712BC06E7F000E947E /* ChatsView.swift */; };
+		18A7F0742BC06E8C000E947E /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A7F0732BC06E8C000E947E /* ContactsView.swift */; };
+		18A7F0762BC06E9B000E947E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A7F0752BC06E9B000E947E /* SettingsView.swift */; };
+		18A7F0782BC06EBE000E947E /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A7F0772BC06EBE000E947E /* TabBarView.swift */; };
+		18A7F07B2BC07841000E947E /* Extension + Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A7F07A2BC07841000E947E /* Extension + Color.swift */; };
+		18A7F07E2BC0878E000E947E /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A7F07D2BC0878E000E947E /* SettingsCell.swift */; };
+		18A7F0802BC0A324000E947E /* SettingsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A7F07F2BC0A324000E947E /* SettingsListCell.swift */; };
+		18A7F0822BC0BF9D000E947E /* SettingsCellFaqs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A7F0812BC0BF9D000E947E /* SettingsCellFaqs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		188CF7012BC1A0C3005596B9 /* HomeNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavBar.swift; sourceTree = "<group>"; };
+		188CF7032BC1B614005596B9 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		188CF7062BC2E675005596B9 /* HomeWineService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWineService.swift; sourceTree = "<group>"; };
+		188CF7082BC2E6C6005596B9 /* Wine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wine.swift; sourceTree = "<group>"; };
 		18A7F02E2BBCA5C7000E947E /* myProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18A7F0312BBCA5C7000E947E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18A7F0332BBCA5C7000E947E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		18A7F0352BBCA5C7000E947E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		18A7F0382BBCA5C7000E947E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18A7F03A2BBCA5CA000E947E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18A7F03D2BBCA5CA000E947E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18A7F03F2BBCA5CA000E947E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18A7F0462BBCA5F1000E947E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		18A7F0712BC06E7F000E947E /* ChatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsView.swift; sourceTree = "<group>"; };
+		18A7F0732BC06E8C000E947E /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
+		18A7F0752BC06E9B000E947E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		18A7F0772BC06EBE000E947E /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		18A7F07A2BC07841000E947E /* Extension + Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + Color.swift"; sourceTree = "<group>"; };
+		18A7F07D2BC0878E000E947E /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		18A7F07F2BC0A324000E947E /* SettingsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsListCell.swift; sourceTree = "<group>"; };
+		18A7F0812BC0BF9D000E947E /* SettingsCellFaqs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCellFaqs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +59,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		188CF6FE2BC0FD81005596B9 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				18A7F0312BBCA5C7000E947E /* AppDelegate.swift */,
+				18A7F0332BBCA5C7000E947E /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		188CF6FF2BC0FD9E005596B9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				18A7F0812BC0BF9D000E947E /* SettingsCellFaqs.swift */,
+				18A7F07D2BC0878E000E947E /* SettingsCell.swift */,
+				18A7F07F2BC0A324000E947E /* SettingsListCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		188CF7002BC1A0A8005596B9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				18A7F0462BBCA5F1000E947E /* HomeView.swift */,
+				188CF7062BC2E675005596B9 /* HomeWineService.swift */,
+				188CF7082BC2E6C6005596B9 /* Wine.swift */,
+				188CF7052BC2E63E005596B9 /* Cells */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		188CF7052BC2E63E005596B9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				188CF7032BC1B614005596B9 /* HomeCell.swift */,
+				188CF7012BC1A0C3005596B9 /* HomeNavBar.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		18A7F0252BBCA5C7000E947E = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +117,43 @@
 		18A7F0302BBCA5C7000E947E /* myProject */ = {
 			isa = PBXGroup;
 			children = (
-				18A7F0312BBCA5C7000E947E /* AppDelegate.swift */,
-				18A7F0332BBCA5C7000E947E /* SceneDelegate.swift */,
-				18A7F0352BBCA5C7000E947E /* ViewController.swift */,
-				18A7F0372BBCA5C7000E947E /* Main.storyboard */,
+				188CF6FE2BC0FD81005596B9 /* App */,
+				18A7F0792BC07815000E947E /* UIcolor */,
+				18A7F0452BBCA5D9000E947E /* Views */,
 				18A7F03A2BBCA5CA000E947E /* Assets.xcassets */,
 				18A7F03C2BBCA5CA000E947E /* LaunchScreen.storyboard */,
 				18A7F03F2BBCA5CA000E947E /* Info.plist */,
 			);
 			path = myProject;
+			sourceTree = "<group>";
+		};
+		18A7F0452BBCA5D9000E947E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				188CF7002BC1A0A8005596B9 /* Home */,
+				18A7F0712BC06E7F000E947E /* ChatsView.swift */,
+				18A7F0732BC06E8C000E947E /* ContactsView.swift */,
+				18A7F07C2BC083FD000E947E /* Settings */,
+				18A7F0772BC06EBE000E947E /* TabBarView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		18A7F0792BC07815000E947E /* UIcolor */ = {
+			isa = PBXGroup;
+			children = (
+				18A7F07A2BC07841000E947E /* Extension + Color.swift */,
+			);
+			path = UIcolor;
+			sourceTree = "<group>";
+		};
+		18A7F07C2BC083FD000E947E /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				18A7F0752BC06E9B000E947E /* SettingsView.swift */,
+				188CF6FF2BC0FD9E005596B9 /* Cells */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +216,6 @@
 			files = (
 				18A7F03E2BBCA5CA000E947E /* LaunchScreen.storyboard in Resources */,
 				18A7F03B2BBCA5CA000E947E /* Assets.xcassets in Resources */,
-				18A7F0392BBCA5C7000E947E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +226,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18A7F0362BBCA5C7000E947E /* ViewController.swift in Sources */,
+				18A7F0822BC0BF9D000E947E /* SettingsCellFaqs.swift in Sources */,
+				18A7F0802BC0A324000E947E /* SettingsListCell.swift in Sources */,
+				18A7F0722BC06E7F000E947E /* ChatsView.swift in Sources */,
+				188CF7072BC2E675005596B9 /* HomeWineService.swift in Sources */,
+				18A7F07B2BC07841000E947E /* Extension + Color.swift in Sources */,
+				18A7F07E2BC0878E000E947E /* SettingsCell.swift in Sources */,
+				18A7F0472BBCA5F1000E947E /* HomeView.swift in Sources */,
+				188CF7042BC1B614005596B9 /* HomeCell.swift in Sources */,
+				18A7F0782BC06EBE000E947E /* TabBarView.swift in Sources */,
 				18A7F0322BBCA5C7000E947E /* AppDelegate.swift in Sources */,
+				18A7F0762BC06E9B000E947E /* SettingsView.swift in Sources */,
+				188CF7092BC2E6C6005596B9 /* Wine.swift in Sources */,
+				18A7F0742BC06E8C000E947E /* ContactsView.swift in Sources */,
+				188CF7022BC1A0C3005596B9 /* HomeNavBar.swift in Sources */,
 				18A7F0342BBCA5C7000E947E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +247,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		18A7F0372BBCA5C7000E947E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				18A7F0382BBCA5C7000E947E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		18A7F03C2BBCA5CA000E947E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -218,7 +310,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -275,7 +367,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -296,7 +388,6 @@
 				INFOPLIST_FILE = myProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -306,9 +397,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = omurbekov.myProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -323,7 +418,6 @@
 				INFOPLIST_FILE = myProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -333,9 +427,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = omurbekov.myProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
