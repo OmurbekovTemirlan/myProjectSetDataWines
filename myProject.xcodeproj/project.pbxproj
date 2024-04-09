@@ -11,6 +11,8 @@
 		188CF7042BC1B614005596B9 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188CF7032BC1B614005596B9 /* HomeCell.swift */; };
 		188CF7072BC2E675005596B9 /* HomeWineService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188CF7062BC2E675005596B9 /* HomeWineService.swift */; };
 		188CF7092BC2E6C6005596B9 /* Wine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188CF7082BC2E6C6005596B9 /* Wine.swift */; };
+		188CF70B2BC565B1005596B9 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188CF70A2BC565B1005596B9 /* HomeModel.swift */; };
+		188CF70D2BC565C6005596B9 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188CF70C2BC565C6005596B9 /* HomeController.swift */; };
 		18A7F0322BBCA5C7000E947E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A7F0312BBCA5C7000E947E /* AppDelegate.swift */; };
 		18A7F0342BBCA5C7000E947E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A7F0332BBCA5C7000E947E /* SceneDelegate.swift */; };
 		18A7F03B2BBCA5CA000E947E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18A7F03A2BBCA5CA000E947E /* Assets.xcassets */; };
@@ -31,6 +33,8 @@
 		188CF7032BC1B614005596B9 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		188CF7062BC2E675005596B9 /* HomeWineService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWineService.swift; sourceTree = "<group>"; };
 		188CF7082BC2E6C6005596B9 /* Wine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wine.swift; sourceTree = "<group>"; };
+		188CF70A2BC565B1005596B9 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		188CF70C2BC565C6005596B9 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		18A7F02E2BBCA5C7000E947E /* myProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18A7F0312BBCA5C7000E947E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18A7F0332BBCA5C7000E947E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,8 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				18A7F0462BBCA5F1000E947E /* HomeView.swift */,
-				188CF7062BC2E675005596B9 /* HomeWineService.swift */,
-				188CF7082BC2E6C6005596B9 /* Wine.swift */,
+				188CF70C2BC565C6005596B9 /* HomeController.swift */,
+				188CF70A2BC565B1005596B9 /* HomeModel.swift */,
 				188CF7052BC2E63E005596B9 /* Cells */,
 			);
 			path = Home;
@@ -92,6 +96,8 @@
 		188CF7052BC2E63E005596B9 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				188CF7062BC2E675005596B9 /* HomeWineService.swift */,
+				188CF7082BC2E6C6005596B9 /* Wine.swift */,
 				188CF7032BC1B614005596B9 /* HomeCell.swift */,
 				188CF7012BC1A0C3005596B9 /* HomeNavBar.swift */,
 			);
@@ -230,9 +236,11 @@
 				18A7F0802BC0A324000E947E /* SettingsListCell.swift in Sources */,
 				18A7F0722BC06E7F000E947E /* ChatsView.swift in Sources */,
 				188CF7072BC2E675005596B9 /* HomeWineService.swift in Sources */,
+				188CF70B2BC565B1005596B9 /* HomeModel.swift in Sources */,
 				18A7F07B2BC07841000E947E /* Extension + Color.swift in Sources */,
 				18A7F07E2BC0878E000E947E /* SettingsCell.swift in Sources */,
 				18A7F0472BBCA5F1000E947E /* HomeView.swift in Sources */,
+				188CF70D2BC565C6005596B9 /* HomeController.swift in Sources */,
 				188CF7042BC1B614005596B9 /* HomeCell.swift in Sources */,
 				18A7F0782BC06EBE000E947E /* TabBarView.swift in Sources */,
 				18A7F0322BBCA5C7000E947E /* AppDelegate.swift in Sources */,

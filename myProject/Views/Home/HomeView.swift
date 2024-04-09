@@ -7,13 +7,17 @@
 
 import UIKit
 
+protocol HomeViewProtocol: AnyObject{
+    func succsesDates(dates: [Wine])
+}
+
 class HomeView: UIViewController {
     
-    let wineService = WineService.shared
+    private var controller: HomeControllerProtocol?
+    
+    private var datess: [Wine] = []
     
     private let cellRegister = "celll"
-    
-    private var dates: [Wine] = []
     
     private lazy var navBar = HomeNavBar()
     
@@ -114,7 +118,7 @@ class HomeView: UIViewController {
     private lazy var listCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
-        layout.itemSize = CGSize(width: (UIScreen.main.bounds.width - 30)  , height: 150)
+        layout.itemSize = CGSize(width: (UIScreen.main.bounds.width - 30)  , height: 230)
         layout.sectionInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
         layout.minimumLineSpacing = 40
         let cl = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -130,10 +134,12 @@ class HomeView: UIViewController {
         view.backgroundColor = .systemBackground
         setupTop()
         setupCenter()
-        wineService.fetchData { date in
-            self.dates = date
-            self.listCollectionView.reloadData()
-        }
+        controller = HomeController(view: self)
+        controller?.onGetDates()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        controller?.onGetDates()
     }
 
     private func setupTop(){
@@ -187,11 +193,11 @@ class HomeView: UIViewController {
 extension HomeView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        dates.count
+        datess.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = listCollectionView.dequeueReusableCell(withReuseIdentifier: cellRegister, for: indexPath) as! HomeCell
-        cell.set(dates: dates[indexPath.row])
+        cell.set(dates: datess[indexPath.row])
         cell.backgroundColor = .systemBackground
         cell.layer.borderWidth = 1
         cell.layer.borderColor = UIColor.systemGray3.cgColor
@@ -201,7 +207,11 @@ extension HomeView: UICollectionViewDataSource {
         return cell
     }
 }
-
-//extension HomeView: UICollectionViewDelegate {
-//    
-//}
+extension HomeView: HomeViewProtocol {
+    func succsesDates(dates: [Wine]) {
+       
+        self.datess = dates
+        
+        self.listCollectionView.reloadData()
+    }
+}
