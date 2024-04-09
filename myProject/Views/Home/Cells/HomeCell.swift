@@ -22,7 +22,7 @@ class HomeCell: UICollectionViewCell {
         let label = UILabel()
         label.numberOfLines = 2
         label.font = .systemFont(ofSize: 13, weight: .regular)
-        label.textColor = .systemGray4
+        label.textColor = .systemGray
         label.textAlignment = .left
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -60,15 +60,15 @@ class HomeCell: UICollectionViewCell {
         NSLayoutConstraint.activate([
             titleFoodLbl.topAnchor.constraint(equalTo: topAnchor, constant: 25),
             titleFoodLbl.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            titleFoodLbl.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -50),
+            titleFoodLbl.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -110),
             
             infoLbl.topAnchor.constraint(equalTo: titleFoodLbl.bottomAnchor, constant: 10),
             infoLbl.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            titleFoodLbl.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -50),
+            infoLbl.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -110),
             
             priceLbl.topAnchor.constraint(equalTo: infoLbl.bottomAnchor, constant: 10),
             priceLbl.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            titleFoodLbl.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -50),
+            priceLbl.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -110),
             
             images.centerYAnchor.constraint(equalTo: centerYAnchor),
             images.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
@@ -78,7 +78,7 @@ class HomeCell: UICollectionViewCell {
     }
     func set(dates: Wine){
         titleFoodLbl.text = dates.wine
-//        infoLbl.text = dates.winery
-//        priceLbl.text = dates.location
+        infoLbl.text = dates.winery
+        priceLbl.text = dates.location
     }
 }

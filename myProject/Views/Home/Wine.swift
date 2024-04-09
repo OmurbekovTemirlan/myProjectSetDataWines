@@ -17,7 +17,7 @@ struct Wine: Decodable {
     let rating: Rating
     let location: String
     let image: String
-    let id: String
+    let id: Int
 }
 
 struct Rating: Decodable {

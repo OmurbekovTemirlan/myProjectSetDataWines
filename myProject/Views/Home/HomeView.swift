@@ -114,7 +114,7 @@ class HomeView: UIViewController {
     private lazy var listCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
-        layout.itemSize = CGSize(width: (UIScreen.main.bounds.width - 30)  , height: 120)
+        layout.itemSize = CGSize(width: (UIScreen.main.bounds.width - 30)  , height: 150)
         layout.sectionInset = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
         layout.minimumLineSpacing = 40
         let cl = UICollectionView(frame: .zero, collectionViewLayout: layout)
