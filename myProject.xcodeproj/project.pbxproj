@@ -14,6 +14,8 @@
 		188CF70B2BC565B1005596B9 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188CF70A2BC565B1005596B9 /* HomeModel.swift */; };
 		188CF70D2BC565C6005596B9 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188CF70C2BC565C6005596B9 /* HomeController.swift */; };
 		188CF7102BC9C90B005596B9 /* ThemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188CF70F2BC9C90B005596B9 /* ThemsView.swift */; };
+		188CF7132BCE9EEF005596B9 /* Extension + color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188CF7122BCE9EEF005596B9 /* Extension + color.swift */; };
+		188CF7152BCE9F56005596B9 /* ThemsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188CF7142BCE9F56005596B9 /* ThemsCell.swift */; };
 		18A7F0322BBCA5C7000E947E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A7F0312BBCA5C7000E947E /* AppDelegate.swift */; };
 		18A7F0342BBCA5C7000E947E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A7F0332BBCA5C7000E947E /* SceneDelegate.swift */; };
 		18A7F03B2BBCA5CA000E947E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18A7F03A2BBCA5CA000E947E /* Assets.xcassets */; };
@@ -36,6 +38,8 @@
 		188CF70A2BC565B1005596B9 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		188CF70C2BC565C6005596B9 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		188CF70F2BC9C90B005596B9 /* ThemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemsView.swift; sourceTree = "<group>"; };
+		188CF7122BCE9EEF005596B9 /* Extension + color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + color.swift"; sourceTree = "<group>"; };
+		188CF7142BCE9F56005596B9 /* ThemsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemsCell.swift; sourceTree = "<group>"; };
 		18A7F02E2BBCA5C7000E947E /* myProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18A7F0312BBCA5C7000E947E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18A7F0332BBCA5C7000E947E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,8 +112,17 @@
 			isa = PBXGroup;
 			children = (
 				188CF70F2BC9C90B005596B9 /* ThemsView.swift */,
+				188CF7142BCE9F56005596B9 /* ThemsCell.swift */,
 			);
 			path = Thems;
+			sourceTree = "<group>";
+		};
+		188CF7112BCE9ED0005596B9 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				188CF7122BCE9EEF005596B9 /* Extension + color.swift */,
+			);
+			path = Colors;
 			sourceTree = "<group>";
 		};
 		18A7F0252BBCA5C7000E947E = {
@@ -132,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				188CF6FE2BC0FD81005596B9 /* App */,
+				188CF7112BCE9ED0005596B9 /* Colors */,
 				18A7F0452BBCA5D9000E947E /* Views */,
 				18A7F03A2BBCA5CA000E947E /* Assets.xcassets */,
 				18A7F03C2BBCA5CA000E947E /* LaunchScreen.storyboard */,
@@ -239,12 +253,14 @@
 				188CF7072BC2E675005596B9 /* HomeWineService.swift in Sources */,
 				188CF70B2BC565B1005596B9 /* HomeModel.swift in Sources */,
 				18A7F07E2BC0878E000E947E /* SettingsCell.swift in Sources */,
+				188CF7132BCE9EEF005596B9 /* Extension + color.swift in Sources */,
 				18A7F0472BBCA5F1000E947E /* HomeView.swift in Sources */,
 				188CF70D2BC565C6005596B9 /* HomeController.swift in Sources */,
 				188CF7042BC1B614005596B9 /* HomeCell.swift in Sources */,
 				18A7F0782BC06EBE000E947E /* TabBarView.swift in Sources */,
 				18A7F0322BBCA5C7000E947E /* AppDelegate.swift in Sources */,
 				18A7F0762BC06E9B000E947E /* SettingsView.swift in Sources */,
+				188CF7152BCE9F56005596B9 /* ThemsCell.swift in Sources */,
 				188CF7092BC2E6C6005596B9 /* Wine.swift in Sources */,
 				18A7F0742BC06E8C000E947E /* ContactsView.swift in Sources */,
 				188CF7022BC1A0C3005596B9 /* HomeNavBar.swift in Sources */,
