@@ -13,6 +13,7 @@
 		188CF7092BC2E6C6005596B9 /* Wine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188CF7082BC2E6C6005596B9 /* Wine.swift */; };
 		188CF70B2BC565B1005596B9 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188CF70A2BC565B1005596B9 /* HomeModel.swift */; };
 		188CF70D2BC565C6005596B9 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188CF70C2BC565C6005596B9 /* HomeController.swift */; };
+		188CF7102BC9C90B005596B9 /* ThemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188CF70F2BC9C90B005596B9 /* ThemsView.swift */; };
 		18A7F0322BBCA5C7000E947E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A7F0312BBCA5C7000E947E /* AppDelegate.swift */; };
 		18A7F0342BBCA5C7000E947E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A7F0332BBCA5C7000E947E /* SceneDelegate.swift */; };
 		18A7F03B2BBCA5CA000E947E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18A7F03A2BBCA5CA000E947E /* Assets.xcassets */; };
@@ -22,7 +23,6 @@
 		18A7F0742BC06E8C000E947E /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A7F0732BC06E8C000E947E /* ContactsView.swift */; };
 		18A7F0762BC06E9B000E947E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A7F0752BC06E9B000E947E /* SettingsView.swift */; };
 		18A7F0782BC06EBE000E947E /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A7F0772BC06EBE000E947E /* TabBarView.swift */; };
-		18A7F07B2BC07841000E947E /* Extension + Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A7F07A2BC07841000E947E /* Extension + Color.swift */; };
 		18A7F07E2BC0878E000E947E /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A7F07D2BC0878E000E947E /* SettingsCell.swift */; };
 		18A7F0802BC0A324000E947E /* SettingsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A7F07F2BC0A324000E947E /* SettingsListCell.swift */; };
 		18A7F0822BC0BF9D000E947E /* SettingsCellFaqs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A7F0812BC0BF9D000E947E /* SettingsCellFaqs.swift */; };
@@ -35,6 +35,7 @@
 		188CF7082BC2E6C6005596B9 /* Wine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wine.swift; sourceTree = "<group>"; };
 		188CF70A2BC565B1005596B9 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		188CF70C2BC565C6005596B9 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		188CF70F2BC9C90B005596B9 /* ThemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemsView.swift; sourceTree = "<group>"; };
 		18A7F02E2BBCA5C7000E947E /* myProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18A7F0312BBCA5C7000E947E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18A7F0332BBCA5C7000E947E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,7 +47,6 @@
 		18A7F0732BC06E8C000E947E /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
 		18A7F0752BC06E9B000E947E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		18A7F0772BC06EBE000E947E /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
-		18A7F07A2BC07841000E947E /* Extension + Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + Color.swift"; sourceTree = "<group>"; };
 		18A7F07D2BC0878E000E947E /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		18A7F07F2BC0A324000E947E /* SettingsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsListCell.swift; sourceTree = "<group>"; };
 		18A7F0812BC0BF9D000E947E /* SettingsCellFaqs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCellFaqs.swift; sourceTree = "<group>"; };
@@ -104,6 +104,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		188CF70E2BC9C8F6005596B9 /* Thems */ = {
+			isa = PBXGroup;
+			children = (
+				188CF70F2BC9C90B005596B9 /* ThemsView.swift */,
+			);
+			path = Thems;
+			sourceTree = "<group>";
+		};
 		18A7F0252BBCA5C7000E947E = {
 			isa = PBXGroup;
 			children = (
@@ -124,7 +132,6 @@
 			isa = PBXGroup;
 			children = (
 				188CF6FE2BC0FD81005596B9 /* App */,
-				18A7F0792BC07815000E947E /* UIcolor */,
 				18A7F0452BBCA5D9000E947E /* Views */,
 				18A7F03A2BBCA5CA000E947E /* Assets.xcassets */,
 				18A7F03C2BBCA5CA000E947E /* LaunchScreen.storyboard */,
@@ -145,19 +152,12 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		18A7F0792BC07815000E947E /* UIcolor */ = {
-			isa = PBXGroup;
-			children = (
-				18A7F07A2BC07841000E947E /* Extension + Color.swift */,
-			);
-			path = UIcolor;
-			sourceTree = "<group>";
-		};
 		18A7F07C2BC083FD000E947E /* Settings */ = {
 			isa = PBXGroup;
 			children = (
 				18A7F0752BC06E9B000E947E /* SettingsView.swift */,
 				188CF6FF2BC0FD9E005596B9 /* Cells */,
+				188CF70E2BC9C8F6005596B9 /* Thems */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -232,12 +232,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				188CF7102BC9C90B005596B9 /* ThemsView.swift in Sources */,
 				18A7F0822BC0BF9D000E947E /* SettingsCellFaqs.swift in Sources */,
 				18A7F0802BC0A324000E947E /* SettingsListCell.swift in Sources */,
 				18A7F0722BC06E7F000E947E /* ChatsView.swift in Sources */,
 				188CF7072BC2E675005596B9 /* HomeWineService.swift in Sources */,
 				188CF70B2BC565B1005596B9 /* HomeModel.swift in Sources */,
-				18A7F07B2BC07841000E947E /* Extension + Color.swift in Sources */,
 				18A7F07E2BC0878E000E947E /* SettingsCell.swift in Sources */,
 				18A7F0472BBCA5F1000E947E /* HomeView.swift in Sources */,
 				188CF70D2BC565C6005596B9 /* HomeController.swift in Sources */,

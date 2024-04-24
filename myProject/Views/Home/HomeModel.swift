@@ -9,35 +9,42 @@ import Foundation
 
 protocol HomeModelProtocol: AnyObject{
     func getDates()
+    func searchWines(text: String)
 }
 
 class HomeModel: HomeModelProtocol{
-   
-weak var controller: HomeControllerProtocol?
+    
+    weak var controller: HomeControllerProtocol?
     
     var wineService = WineService.shared
     
     private var dates: [Wine] = []
     
+    private var filteredDates: [Wine] = []
     
     init(controller: HomeControllerProtocol?) {
         self.controller = controller
     }
-   
-  
-//    func getDates() {
-//        dates = wineService.fetchData { date in
-//            self.dates = date
-//            self.controller?.onSuccsesDates(dates: self.dates)
-//        }
-//    }
+    
     func getDates() {
+        
         wineService.fetchData { dates in
-            // Передаем полученные данные в замыкание
+            self.dates = dates
+            self.filteredDates = dates
             self.controller?.onSuccsesDates(dates: dates)
         }
     }
-
     
+    func searchWines(text: String) {
+       filteredDates = []
+        if text.isEmpty {
+            filteredDates = dates
+            controller?.onSuccsesDates(dates: filteredDates)
+        } else {
+            filteredDates = dates.filter({date in date.wine.uppercased().contains(text.uppercased()) == true })
+            controller?.onSuccsesDates(dates: filteredDates)
+            
+        }
     }
+}
 

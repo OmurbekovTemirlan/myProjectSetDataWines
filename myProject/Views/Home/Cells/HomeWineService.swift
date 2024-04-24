@@ -30,7 +30,6 @@ class WineService {
                     DispatchQueue.main.async {
                         completion(wines)
                     }
-                    //                    print("Данные успешно получены и декодированы:", wines)
                 } catch {
                     print("Ошибка декодирования данных:", error.localizedDescription)
                 }

@@ -10,6 +10,7 @@ import UIKit
 protocol HomeControllerProtocol: AnyObject{
     func onGetDates()
     func onSuccsesDates(dates: [Wine])
+    func onSearchWines(text: String)
 }
 
 class HomeController: HomeControllerProtocol {
@@ -26,5 +27,8 @@ class HomeController: HomeControllerProtocol {
     }
     func onSuccsesDates(dates: [Wine]){
         view?.succsesDates(dates: dates)
+    }
+    func onSearchWines(text: String){
+        model?.searchWines(text: text)
     }
 }

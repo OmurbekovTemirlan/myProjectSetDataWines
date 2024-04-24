@@ -99,7 +99,6 @@ class HomeCell: UICollectionViewCell {
             }
             DispatchQueue.main.async {
                 self.images.image = image
-                print("image", image)
             }
         }
         task.resume()

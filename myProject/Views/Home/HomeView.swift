@@ -19,6 +19,8 @@ class HomeView: UIViewController {
     
     private let cellRegister = "celll"
     
+    private var isSearching: Bool = false
+    
     private lazy var navBar = HomeNavBar()
     
     private lazy var hStac: UIStackView = {
@@ -34,8 +36,11 @@ class HomeView: UIViewController {
     private lazy var sectionsBtn: UIButton = {
         let view = UIButton(type: .system)
         view.setTitle("Popular", for: .normal)
-        view.setTitleColor(UIColor.black, for: .normal)
+        view.setTitleColor(UIColor(named: "darkThems"), for: .normal)
         view.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
+        view.layer.borderWidth = 1
+        view.layer.borderColor = UIColor.systemGray3.cgColor
+        view.layer.cornerRadius = 12
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -43,8 +48,11 @@ class HomeView: UIViewController {
     private lazy var sectionsBtn2: UIButton = {
         let view = UIButton(type: .system)
         view.setTitle("Offer", for: .normal)
-        view.setTitleColor(UIColor.black, for: .normal)
+        view.setTitleColor(UIColor(named: "darkThems"), for: .normal)
         view.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
+        view.layer.borderWidth = 1
+        view.layer.borderColor = UIColor.systemGray3.cgColor
+        view.layer.cornerRadius = 12
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -52,8 +60,11 @@ class HomeView: UIViewController {
     private lazy var sectionsBtn3: UIButton = {
         let view = UIButton(type: .system)
         view.setTitle("Restaurant", for: .normal)
-        view.setTitleColor(UIColor.black, for: .normal)
+        view.setTitleColor(UIColor(named: "darkThems"), for: .normal)
         view.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
+        view.layer.borderWidth = 1
+        view.layer.borderColor = UIColor.systemGray3.cgColor
+        view.layer.cornerRadius = 12
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -65,6 +76,7 @@ class HomeView: UIViewController {
         view.layer.borderColor = UIColor.systemGray3.cgColor
         view.layer.cornerRadius = 13
         view.backgroundColor = UIColor.clear
+        view.addTarget(self, action: #selector(searchBarEditing), for: .editingChanged)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -82,9 +94,9 @@ class HomeView: UIViewController {
     private lazy var allBtn: UIButton = {
         let view = UIButton(type: .system)
         view.setTitle("All", for: .normal)
-        view.setTitleColor(UIColor.black, for: .normal)
+        view.setTitleColor(UIColor(named: "darkThems"), for: .normal)
         view.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
-        view.layer.borderWidth = 2
+        view.layer.borderWidth = 1
         view.layer.borderColor = UIColor.systemGray3.cgColor
         view.layer.cornerRadius = 12
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -94,9 +106,9 @@ class HomeView: UIViewController {
     private lazy var fastFoodBtn: UIButton = {
         let view = UIButton(type: .system)
         view.setTitle("Fast Food", for: .normal)
-        view.setTitleColor(UIColor.black, for: .normal)
+        view.setTitleColor(UIColor(named: "darkThems"), for: .normal)
         view.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
-        view.layer.borderWidth = 2
+        view.layer.borderWidth = 1
         view.layer.borderColor = UIColor.systemGray3.cgColor
         view.layer.cornerRadius = 12
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -106,15 +118,24 @@ class HomeView: UIViewController {
     private lazy var drinkBtn: UIButton = {
         let view = UIButton(type: .system)
         view.setTitle("Alcahols", for: .normal)
-        view.setTitleColor(UIColor.black, for: .normal)
+        view.setTitleColor(UIColor(named: "darkThems"), for: .normal)
         view.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
-        view.layer.borderWidth = 2
+        view.layer.borderWidth = 1
         view.layer.borderColor = UIColor.systemGray3.cgColor
         view.layer.cornerRadius = 12
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-   
+    
+    private lazy var searchResultLabel: UILabel = {
+        let view = UILabel()
+//        view.text = "Проверьте ваш интернет!!"
+        view.isHidden = false
+        view.textAlignment = .center
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     private lazy var listCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -136,10 +157,14 @@ class HomeView: UIViewController {
         setupCenter()
         controller = HomeController(view: self)
         controller?.onGetDates()
+        addGestureReconizer()
+        view.bringSubviewToFront(searchResultLabel)
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         controller?.onGetDates()
+        listCollectionView.reloadData()
+
     }
 
     private func setupTop(){
@@ -149,7 +174,6 @@ class HomeView: UIViewController {
         hStac.addArrangedSubview(sectionsBtn2)
         hStac.addArrangedSubview(sectionsBtn3)
         view.addSubview(searchBar)
-        
         navBar.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
@@ -167,6 +191,8 @@ class HomeView: UIViewController {
             searchBar.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             searchBar.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             searchBar.heightAnchor.constraint(equalToConstant: 40),
+            
+            
         ])
     }
     
@@ -175,6 +201,8 @@ class HomeView: UIViewController {
         hStacLists.addArrangedSubview(allBtn)
         hStacLists.addArrangedSubview(fastFoodBtn)
         hStacLists.addArrangedSubview(drinkBtn)
+        view.addSubview(searchResultLabel)
+        
         view.addSubview(listCollectionView)
         NSLayoutConstraint.activate([
             hStacLists.topAnchor.constraint(equalTo: searchBar.bottomAnchor, constant: 20),
@@ -182,11 +210,42 @@ class HomeView: UIViewController {
             hStacLists.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             hStacLists.heightAnchor.constraint(equalToConstant: 40),
             
+            searchResultLabel.topAnchor.constraint(equalTo: hStacLists.bottomAnchor, constant: 50),
+            searchResultLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            
             listCollectionView.topAnchor.constraint(equalTo: hStacLists.bottomAnchor, constant: 15),
             listCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             listCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             listCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10),
         ])
+    }
+    private func addGestureReconizer(){
+        let tap = UITapGestureRecognizer(target: self, action: #selector(resignSearchBar))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    @objc private func resignSearchBar(){
+        searchBar.text = ""
+        searchResultLabel.text = ""
+        controller?.onGetDates()
+        searchBar.resignFirstResponder()
+        
+        if datess.isEmpty{
+            searchResultLabel.isHidden = false
+            searchResultLabel.text = "По вашему запросу ничего не найдено..."
+        }else{
+            searchResultLabel.isHidden = true
+        }
+    }
+    
+    @objc private func searchBarEditing(){
+        guard let text = searchBar.text else {return}
+        isSearching = true
+        controller?.onSearchWines(text: text)
+        listCollectionView.reloadData()
+        if searchBar.text == "" {
+            searchResultLabel.text = ""
+        }
     }
 }
 
@@ -209,9 +268,13 @@ extension HomeView: UICollectionViewDataSource {
 }
 extension HomeView: HomeViewProtocol {
     func succsesDates(dates: [Wine]) {
-       
+        if dates.isEmpty{
+            searchResultLabel.isHidden = false
+           searchResultLabel.text = "По вашему запросу ничего не найдено..."
+        }else{
+            searchResultLabel.isHidden = true
+        }
         self.datess = dates
-        
         self.listCollectionView.reloadData()
     }
 }

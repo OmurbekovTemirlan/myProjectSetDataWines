@@ -20,7 +20,7 @@ class SettingsView: UIViewController {
     
     private lazy var settingsElementsSecond: [SettingselementsSecond] = [
         SettingselementsSecond(icons: "globe", titles: "Languages", rightIcons: "chevron.right"),
-        SettingselementsSecond(icons: "microbe.circle", titles: "Themes", rightIcons: "chevron.right"),
+        SettingselementsSecond(icons: "microbe.circle", titles: "Thems", rightIcons: "chevron.right"),
         SettingselementsSecond(icons: "key.fill", titles: "Account", rightIcons: "chevron.right"),
         SettingselementsSecond(icons: "star", titles: "Favorites", rightIcons: "chevron.right"),
         SettingselementsSecond(icons: "bell", titles: "Notifications", rightIcons: "chevron.right"),
@@ -245,5 +245,12 @@ extension SettingsView: UITableViewDelegate {
       return 50
         }
         
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 1 {
+           let themsVC = ThemsView()
+            
+            navigationController?.pushViewController(themsVC, animated: true)
+        }
+    }
     
 }
